@@ -53,8 +53,8 @@ A wishlist management app with real-time updates and sharing.
 ## 📫 Connect With Me
 - Portfolio: [devsagarkumarjha.vercel.app](https://devsagarkumarjha.vercel.app)
 - GitHub: [@DevSagarKumarJha](https://github.com/DevSagarKumarJha)
-- LinkedIn: [Sagar Kumar Jha](https://www.linkedin.com/in/sagarkumarjha)
-- Twitter: [@sagarkumarjha](https://twitter.com/sagarkumarjha)
+- LinkedIn: [Sagar Kumar Jha](https://www.linkedin.com/in/devsagarkumarjha)
+- Twitter: [@DevSagarKrJha](https://x.com/DevSagarKrJha)
 
 ---
 

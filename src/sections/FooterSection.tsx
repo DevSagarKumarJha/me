@@ -6,7 +6,7 @@ import { Github, Linkedin, Mail } from "lucide-react";
 
 const FooterSection = () => {
   return (
-    <footer className="w-full border-t border-gray-200 dark:border-gray-700 mt-16">
+    <footer className="w-full border-t border-gray-200 dark:border-gray-700 mt-16" data-landmark-index="2">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}

@@ -74,7 +74,7 @@ function ThemeToggle() {
   return (
     <button
       aria-label="Toggle theme"
-      className="p-2 rounded-full bg-white/40 dark:bg-black/40 backdrop-blur-md border transition-colors"
+      className="p-2 rounded-full bg-white/40 dark:bg-black/40 backdrop-blur-md border transition-colors cursor-pointer"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
     >
       {theme === "dark" ? (

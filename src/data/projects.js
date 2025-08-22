@@ -5,7 +5,6 @@ export const projects = [
       "A modern, accessible UI library built with Next.js, TailwindCSS, and WCAG compliance. Focused on usability, accessibility, and developer experience.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "WCAG"],
     link: "https://zenui.dev",
-    repo: "https://github.com/Abhijeet43/zen-ui",
     live: true,
   },
   {
@@ -27,7 +26,9 @@ export const projects = [
     description:
       "Personal wishlist manager app with persistent storage and responsive design.",
     tech: ["React", "LocalStorage", "Tailwind"],
+    link: "https://wish-list-wizard.vercel.app/",
     repo: "https://github.com/DevSagarKumarJha/WishListWizard",
+    live: true,
   },
   {
     name: "ErrorHub",

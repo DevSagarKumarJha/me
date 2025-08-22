@@ -77,14 +77,14 @@ const ProjectsSection = () => {
                         Live
                       </a>
                     )}
-                    <a
+                    {project.repo && (<a
                       href={project.repo}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="px-4 py-2 text-sm font-medium rounded-lg border border-violet-500 text-violet-600 dark:text-violet-300 hover:bg-violet-100 dark:hover:bg-violet-900/40 transition"
                     >
                       Code
-                    </a>
+                    </a>)}
                   </div>
                 </motion.div>
               ))}

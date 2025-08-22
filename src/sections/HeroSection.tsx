@@ -39,7 +39,7 @@ const HeroSection: FC = () => {
             </Link>
             <Link
               href="#contacts"
-              className="rounded-2xl px-6 py-2 text-lg"
+              className="rounded-2xl px-6 py-2 text-lg border border-gray-500"
             >
               Contact Me
             </Link>

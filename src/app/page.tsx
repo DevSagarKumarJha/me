@@ -13,7 +13,7 @@ export default function Home() {
       <Navbar />
       <main className="w-full" data-landmark-index="1">
         <HeroSection />
-        <div className="max-w-7xl mx-auto dark:bg-gray-900 mt-">
+        <div className="max-w-7xl mx-auto dark:bg-gray-900">
           <AboutSection />
           <ProjectsSection/>
           <ExperienceEducationSection/>

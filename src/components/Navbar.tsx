@@ -78,9 +78,9 @@ function ThemeToggle() {
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
     >
       {theme === "dark" ? (
-        <SunIcon className="size-5" />
+        <SunIcon className="size-5 text-yellow-400 hover:text-yellow-300" />
       ) : (
-        <MoonIcon className="size-5" />
+          <MoonIcon className="size-5 text-yellow-400  hover:text-yellow-300" />
       )}
     </button>
   );

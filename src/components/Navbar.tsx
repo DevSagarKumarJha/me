@@ -49,7 +49,7 @@ function NavLinks({ onClick }: { onClick?: () => void }) {
   const links = [
     { href: "#about", label: "About" },
     { href: "#projects", label: "Projects" },
-    { href: "#experience", label: "Experience" },
+    { href: "#experience-education", label: "Experience/Education" },
     { href: "#skills", label: "Skills" },
   ];
   return (

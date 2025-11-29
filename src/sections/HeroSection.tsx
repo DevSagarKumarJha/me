@@ -2,17 +2,24 @@
 
 import { FC } from "react";
 import { motion } from "framer-motion";
-import { Card, CardContent } from "@/components/ui/card";
+import { leetcodeStats } from "@/data/leetcodeStats";
 import Link from "next/link";
+import CodeExample from "@/components/CodeExample";
+
+import { Intro } from "@/data/intro";
 
 const HeroSection: FC = () => {
   return (
-    <section className="relative overflow-hidden">
-      {/* Background Gradient Animation */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-violet-100 via-white to-pink-100 dark:from-violet-600 dark:via-gray-700 dark:to-pink-700 animate-gradient" />
+    <section className="relative overflow-hidden bg-gradient-to-b from-gray-100 via-gray-50 to-white dark:from-gray-950 dark:via-gray-900 dark:to-black">
+      {/* Animated code-like background elements */}
+      <div className="absolute top-10 right-10 text-orange-500/50 font-mono text-sm hidden lg:block">
+        &lt;algorithm /&gt;
+      </div>
+      <div className="absolute bottom-20 left-10 text-orange-500/50 font-mono text-4xl hidden lg:block">
+        DSA
+      </div>
 
-      <div className="max-w-7xl mx-auto px-6 py-20 flex flex-col-reverse md:grid md:grid-cols-2 gap-12 items-center">
-
+      <div className="max-w-7xl mx-auto px-6 py-32 flex flex-col-reverse md:grid md:grid-cols-2 gap-12 items-center">
         {/* Left Content */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -20,26 +27,47 @@ const HeroSection: FC = () => {
           transition={{ duration: 0.7 }}
           className="space-y-6 tracking-tight"
         >
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight">
-            Hi, I am{" "}
-            <span className="text-violet-700 dark:text-violet-300 font-serif">Sagar Kumar Jha</span>
+          <div className="inline-block px-4 py-2 rounded-full bg-orange-500/20 border border-orange-500/50 text-orange-400 text-sm font-semibold">
+            {`LeetCode Expert | ${leetcodeStats.totalSolved}+ Problems Solved`}
+          </div>
+
+          <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold leading-tight">
+            <span className="dark:text-white ">Sagar Kumar</span>
+            <br />
+            <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
+              Jha
+            </span>
           </h1>
-          <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-700 dark:text-gray-200">
-            Full Stack Web Developer
+
+          <h2 className="text-xl sm:text-2xl  font-bold text-gray-700 dark:text-gray-200">
+            Full Stack Developer | MERN | Prisma
           </h2>
-          <p className="text-gray-600 dark:text-gray-300 max-w-md">
-            I build modern, scalable, and user-friendly web applications
-            with clean code and strong architecture.
+
+          <p className="text-gray-600 max-w-lg text-lg">
+            Passionate about writing optimal algorithms and scalable systems.
+            Consistently solving complex problems across multiple platforms.
           </p>
 
-          <div className="flex gap-4">
-            <Link href={"https://drive.google.com/file/d/1BeBRuNNMUZumdOR9IxcGV-G9VTjfj6I4/view?usp=sharing"} target="_blank" className="rounded-2xl px-6 py-2 text-lg shadow-lg bg-black text-white dark:bg-white dark:text-black
-            ">
+          <div className="flex gap-4 flex-wrap">
+            <Link
+              href={leetcodeStats.profileUrl}
+              target="_blank"
+              className="px-6 py-3 rounded-lg bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold hover:shadow-lg hover:shadow-orange-500/50 transition-all"
+            >
+              LeetCode Profile
+            </Link>
+            <Link
+              href={
+                "https://drive.google.com/file/d/1BeBRuNNMUZumdOR9IxcGV-G9VTjfj6I4/view?usp=sharing"
+              }
+              target="_blank"
+              className="px-6 py-3 rounded-lg border border-orange-500 text-orange-400 font-semibold hover:bg-orange-500/10 transition-all"
+            >
               Resume
             </Link>
             <Link
               href="#contacts"
-              className="rounded-2xl px-6 py-2 text-lg border border-gray-500"
+              className="px-6 py-3 rounded-lg border border-gray-500 text-gray-500 dark:text-gray-300 font-semibold hover:border-orange-500 hover:text-orange-400 transition-all"
             >
               Contact Me
             </Link>
@@ -51,25 +79,18 @@ const HeroSection: FC = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="flex justify-center"
+          className="flex justify-center h-full"
         >
           <motion.div
-            animate={{ y: [0, -15, 0] }}
+            animate={{ y: [50, 0, 50] }}
             transition={{
               duration: 4,
               repeat: Infinity,
               ease: "easeInOut",
             }}
+            className="w-full"
           >
-            <Card className="shadow-2xl p-0 rounded-2xl overflow-hidden border-2 border-violet-200">
-              <CardContent className="p-0">
-                <img
-                  src="https://avatars.githubusercontent.com/u/162960900?s=400&u=14f17ea2e2dca8c0aa9e336f492ad89cb27b1988&v=4"
-                  alt="Sagar Kumar Jha"
-                  className="w-full h-96 object-cover rounded-2xl"
-                />
-              </CardContent>
-            </Card>
+            <CodeExample code={Intro} fileName="intro.json" language="json" />
           </motion.div>
         </motion.div>
       </div>

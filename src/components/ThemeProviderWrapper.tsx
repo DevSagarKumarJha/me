@@ -13,7 +13,10 @@ export default function ThemeProviderWrapper({
   useEffect(() => {
     setMounted(true);
   }, []);
-
+  if (!mounted) {
+    // Prevent hydration mismatch by not rendering until after mount
+    return <>{children}</>;
+  }
   return (
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
       {children}

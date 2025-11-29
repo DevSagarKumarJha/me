@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { MenuIcon, XIcon, MoonIcon, SunIcon } from "lucide-react";
+import { MenuIcon, XIcon, MoonIcon, SunIcon, LaptopIcon } from "lucide-react";
 import { useTheme } from "next-themes";
 
 export function Navbar() {
@@ -10,7 +10,7 @@ export function Navbar() {
 
   return (
     <nav
-      className="sticky top-0 z-50 w-full px-4 py-3 bg-gray-900/95 dark:bg-gray-950/95 backdrop-blur-lg border-b border-orange-500/30 dark:border-orange-600/30 shadow-lg"
+      className="sticky top-0 z-50 w-full px-4 py-3 bg-gray-100/95 dark:bg-gray-950/95 backdrop-blur-lg border-b border-orange-500/30 dark:border-orange-600/30 shadow-lg"
       data-landmark-index="0"
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
@@ -66,7 +66,7 @@ function NavLinks({ onClick }: { onClick?: () => void }) {
         <li key={link.href}>
           <Link
             href={link.href}
-            className="px-4 py-2 rounded-lg text-gray-300 hover:text-orange-400 hover:bg-orange-500/10 transition font-medium text-sm"
+            className="px-4 py-2 rounded-lg text-gray-800 ease-in-out hover:text-orange-400 hover:bg-orange-500/10 transition font-medium text-sm"
             onClick={onClick}
           >
             {link.label}
@@ -77,19 +77,40 @@ function NavLinks({ onClick }: { onClick?: () => void }) {
   );
 }
 
-function ThemeToggle() {
+export function ThemeToggle() {
   const { theme, setTheme } = useTheme();
+
+  // Fix hydration mismatch issue
+  const [mounted, setMounted] = React.useState(false);
+  React.useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
+
+  // Rotate: light → dark → system → light...
+  const toggleTheme = () => {
+    if (theme === "light") setTheme("dark");
+    else if (theme === "dark") setTheme("system");
+    else setTheme("light");
+  };
+
+  const renderIcon = () => {
+    if (theme === "light")
+      return <SunIcon className="size-5 text-yellow-500" />;
+    if (theme === "dark") return <MoonIcon className="size-5 text-blue-300" />;
+    return <LaptopIcon className="size-5 text-purple-400" />; // system mode
+  };
+
   return (
     <button
       aria-label="Toggle theme"
-      className="p-2 rounded-full bg-white/40 dark:bg-black/40 backdrop-blur-md border transition-colors cursor-pointer"
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      onClick={toggleTheme}
+      className="
+        p-2 rounded-full bg-white/40 dark:bg-black/40
+        backdrop-blur-md border transition-all cursor-pointer
+        hover:bg-white/60 dark:hover:bg-black/60
+      "
     >
-      {theme === "dark" ? (
-        <SunIcon className="size-5 text-yellow-400 hover:text-yellow-300" />
-      ) : (
-        <MoonIcon className="size-5 text-yellow-400  hover:text-yellow-300" />
-      )}
+      {renderIcon()}
     </button>
   );
 }
+

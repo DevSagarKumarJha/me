@@ -1,5 +1,5 @@
-import { useState, useEffect, useRef } from "react";
-import { Check, Copy, Expand } from "lucide-react";
+"use client";
+import { useEffect, useRef } from "react";
 import Prism from "prismjs";
 
 import "prismjs/themes/prism-tomorrow.css";
@@ -9,8 +9,6 @@ import "prismjs/components/prism-css";
 import "prismjs/components/prism-scss";
 import "prismjs/components/prism-bash";
 import "prismjs/components/prism-json";
-
-import { Button } from "./ui/button";
 
 // ------------------------------
 //      Type Definitions
@@ -30,17 +28,10 @@ const CodeExample = ({
   code = "",
   language = "tsx",
   fileName = "intro.js",
-  copyable = false,
 }: CodeExampleProps) => {
-  const [copied, setCopied] = useState(false);
 
   const codeRef = useRef<HTMLElement | null>(null);
-
-  const handleCopy = async () => {
-    await navigator.clipboard.writeText(code);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
+  
 
   useEffect(() => {
     if (codeRef.current) {

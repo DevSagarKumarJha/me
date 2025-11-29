@@ -66,7 +66,7 @@ function NavLinks({ onClick }: { onClick?: () => void }) {
         <li key={link.href}>
           <Link
             href={link.href}
-            className="px-4 py-2 rounded-lg text-gray-800 ease-in-out hover:text-orange-400 hover:bg-orange-500/10 transition font-medium text-sm"
+            className="px-4 py-2 rounded-lg text-gray-800 dark:text-gray-200 ease-in-out hover:text-orange-400 hover:bg-orange-500/30 transition font-medium text-sm"
             onClick={onClick}
           >
             {link.label}

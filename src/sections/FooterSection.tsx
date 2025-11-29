@@ -6,7 +6,10 @@ import { Github, Linkedin, Mail } from "lucide-react";
 
 const FooterSection = () => {
   return (
-    <footer className="w-full border-t border-gray-200 dark:border-gray-700 mt-16" data-landmark-index="2">
+    <footer
+      className="w-full border-t border-orange-500/20 dark:border-orange-600/20 mt-16"
+      data-landmark-index="2"
+    >
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -16,7 +19,8 @@ const FooterSection = () => {
       >
         {/* Branding */}
         <p className="text-gray-600 dark:text-gray-400 text-sm">
-          © {new Date().getFullYear()} Sagar Kumar Jha. All rights reserved.
+          © {new Date().getFullYear()} Sagar Kumar Jha. All rights reserved. |
+          LeetCode Expert
         </p>
 
         {/* Social Links */}
@@ -25,7 +29,7 @@ const FooterSection = () => {
             href="mailto:devsagarkumarjha@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-600 hover:text-violet-600 dark:text-gray-400 dark:hover:text-violet-400 transition"
+            className="text-gray-600 hover:text-orange-600 dark:text-gray-400 dark:hover:text-orange-400 transition"
           >
             <Mail className="w-5 h-5" />
           </a>
@@ -33,7 +37,7 @@ const FooterSection = () => {
             href="https://github.com/DevSagarKumarJha"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-600 hover:text-violet-600 dark:text-gray-400 dark:hover:text-violet-400 transition"
+            className="text-gray-600 hover:text-orange-600 dark:text-gray-400 dark:hover:text-orange-400 transition"
           >
             <Github className="w-5 h-5" />
           </a>
@@ -41,7 +45,7 @@ const FooterSection = () => {
             href="https://www.linkedin.com/in/devsagarkumarjha"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-600 hover:text-violet-600 dark:text-gray-400 dark:hover:text-violet-400 transition"
+            className="text-gray-600 hover:text-orange-600 dark:text-gray-400 dark:hover:text-orange-400 transition"
           >
             <Linkedin className="w-5 h-5" />
           </a>

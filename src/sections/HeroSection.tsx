@@ -10,7 +10,7 @@ import { Intro } from "@/data/intro";
 
 const HeroSection: FC = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-gray-100 via-gray-50 to-white dark:from-gray-950 dark:via-gray-900 dark:to-black">
+    <section className="relative overflow-hidden">
       {/* Animated code-like background elements */}
       <div className="absolute top-10 right-10 text-orange-500/50 font-mono text-sm hidden lg:block">
         &lt;algorithm /&gt;

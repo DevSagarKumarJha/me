@@ -9,35 +9,41 @@ export function Navbar() {
   const [menuOpen, setMenuOpen] = React.useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 border max-w-5xl mx-auto px-4 py-2 bg-white/70 dark:bg-black/50 backdrop-blur-md shadow-lg rounded-xl mt-4" data-landmark-index="0">
-      <div className="flex justify-between items-center">
-        <Link href="/" className="text-2xl font-semibold">
-          Sagar Kumar Jha
+    <nav
+      className="sticky top-0 z-50 w-full px-4 py-3 bg-gray-900/95 dark:bg-gray-950/95 backdrop-blur-lg border-b border-orange-500/30 dark:border-orange-600/30 shadow-lg"
+      data-landmark-index="0"
+    >
+      <div className="max-w-7xl mx-auto flex justify-between items-center">
+        <Link
+          href="/"
+          className="text-xl font-bold bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent hover:from-orange-300 hover:to-red-400 transition"
+        >
+          🚀 Sagar Kumar Jha
         </Link>
         <div className="flex items-center gap-2 md:gap-4">
           {/* Desktop Menu */}
-          <ul className="hidden md:flex items-center gap-4">
+          <ul className="hidden lg:flex items-center gap-4">
             <NavLinks />
           </ul>
           {/* Theme Toggle */}
           <ThemeToggle />
           {/* Hamburger Icon */}
           <button
-            className="md:hidden p-2 rounded-full bg-white/40 dark:bg-black/40 backdrop-blur-md border"
+            className="lg:hidden p-2 rounded-full bg-orange-500/20 dark:bg-orange-600/20 border border-orange-500/50 hover:bg-orange-500/30 transition"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >
             {menuOpen ? (
-              <XIcon className="size-5" />
+              <XIcon className="size-5 text-orange-400" />
             ) : (
-              <MenuIcon className="size-5" />
+              <MenuIcon className="size-5 text-orange-400" />
             )}
           </button>
         </div>
       </div>
       {/* Mobile Menu */}
       {menuOpen && (
-        <ul className="flex flex-col justify-center items-center gap-2 mt-2 md:hidden">
+        <ul className="flex flex-col justify-center items-center gap-2 mt-2 lg:hidden">
           <NavLinks onClick={() => setMenuOpen(false)} />
         </ul>
       )}
@@ -47,10 +53,12 @@ export function Navbar() {
 
 function NavLinks({ onClick }: { onClick?: () => void }) {
   const links = [
+    { href: "#leetcode-stats", label: "Coding Stats" },
     { href: "#about", label: "About" },
     { href: "#projects", label: "Projects" },
-    { href: "#experience-education", label: "Experience/Education" },
+    { href: "#experience-education", label: "Experience" },
     { href: "#skills", label: "Skills" },
+    { href: "#contacts", label: "Contact" },
   ];
   return (
     <>
@@ -58,7 +66,7 @@ function NavLinks({ onClick }: { onClick?: () => void }) {
         <li key={link.href}>
           <Link
             href={link.href}
-            className="px-3 py-1 rounded-lg hover:bg-white/80 dark:hover:bg-black/60 transition"
+            className="px-4 py-2 rounded-lg text-gray-300 hover:text-orange-400 hover:bg-orange-500/10 transition font-medium text-sm"
             onClick={onClick}
           >
             {link.label}
@@ -80,7 +88,7 @@ function ThemeToggle() {
       {theme === "dark" ? (
         <SunIcon className="size-5 text-yellow-400 hover:text-yellow-300" />
       ) : (
-          <MoonIcon className="size-5 text-yellow-400  hover:text-yellow-300" />
+        <MoonIcon className="size-5 text-yellow-400  hover:text-yellow-300" />
       )}
     </button>
   );

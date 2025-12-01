@@ -1,4 +1,5 @@
 "use client";
+
 import { useEffect, useRef } from "react";
 import Prism from "prismjs";
 
@@ -10,9 +11,6 @@ import "prismjs/components/prism-scss";
 import "prismjs/components/prism-bash";
 import "prismjs/components/prism-json";
 
-// ------------------------------
-//      Type Definitions
-// ------------------------------
 interface CodeExampleProps {
   code?: string;
   language?: string;
@@ -20,45 +18,32 @@ interface CodeExampleProps {
   copyable?: boolean;
 }
 
-type LangMap = {
-  [key: string]: string;
+const langMap: Record<string, string> = {
+  js: "javascript",
+  tsx: "tsx",
+  html: "html",
+  css: "css",
+  scss: "scss",
+  json: "json",
+  bash: "bash",
+  shell: "bash",
 };
 
-const CodeExample = ({
+export default function CodeExample({
   code = "",
   language = "tsx",
   fileName = "intro.js",
-}: CodeExampleProps) => {
-
+}: CodeExampleProps) {
   const codeRef = useRef<HTMLElement | null>(null);
-  
+  const resolvedLang = langMap[language] || language;
 
   useEffect(() => {
-    if (codeRef.current) {
-      Prism.highlightElement(codeRef.current);
-    }
-  }, [code, language]);
-
-  const getPrismLanguage = (lang: string): string => {
-    const langMap: LangMap = {
-      js: "javascript",
-      tsx: "tsx",
-      css: "css",
-      scss: "scss",
-      html: "html",
-      json: "json",
-      bash: "bash",
-      shell: "bash",
-    };
-
-    return langMap[lang] || lang;
-  };
+    if (codeRef.current) Prism.highlightElement(codeRef.current);
+  }, [code, resolvedLang]);
 
   return (
-    <div
-      className={`relative rounded-md overflow-hidden border border-orange-300 inset-2 md:inset-4 z-50 flex flex-col 
-      }`}
-    >
+    <div className="relative rounded-md overflow-hidden border border-orange-300 inset-2 md:inset-4 z-50 flex flex-col">
+      {/* Top bar */}
       <div className="flex justify-start bg-gray-100 dark:bg-[#2a2a2a] border-b border-orange-300">
         <div className="flex justify-center items-center gap-1 pl-4 pr-2">
           <div className="bg-red-500 p-2 rounded-full"></div>
@@ -67,22 +52,23 @@ const CodeExample = ({
         </div>
 
         {fileName && (
-          <div className="flex items-center w-full py-1.5 md:py-2  text-gray-700 dark:text-gray-200 text-lg">
+          <div className="flex items-center w-full py-1.5 md:py-2 text-gray-700 dark:text-gray-200 text-lg">
             {fileName}
           </div>
         )}
       </div>
 
-      <div
-        className={`relative flex-1 justify-center items-center overflow-auto`}
-      >
+      {/* Code Container */}
+      <div className="relative flex-1 justify-center items-center overflow-auto">
         <pre
-          className={"sm:p-4 overflow-x-auto text-xs sm:text-sm"}
+          className={`sm:p-4 overflow-x-auto text-xs sm:text-sm`}
+          // 👇 static style (no dynamic values = SSR safe)
           style={{ backgroundColor: "var(--code-bg, #0a0a0a)" }}
+          tabIndex={0} // 👈 explicitly added (fix mismatch)
         >
           <code
             ref={codeRef}
-            className={`language-${getPrismLanguage(language)}`}
+            className={`language-${resolvedLang}`} // 👈 stable on server + client
           >
             {code}
           </code>
@@ -90,6 +76,4 @@ const CodeExample = ({
       </div>
     </div>
   );
-};
-
-export default CodeExample;
+}

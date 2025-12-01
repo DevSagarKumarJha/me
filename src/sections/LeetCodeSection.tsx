@@ -5,20 +5,10 @@ import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { AnimatedStatCard } from "@/components/ui/AnimatedStatCard";
 import { AnimatedDifficultyCard } from "@/components/ui/AnimatedDifficultyCard";
 
-type LiveStats = {
-  username: string;
-  profileUrl: string;
-  totalSolved: number;
-  easyCount: number;
-  mediumCount: number;
-  hardCount: number;
-  acceptanceRate: string | null;
-  streak: number;
-};
-
 // ---------------------------------
 // STATIC COLOR MAP (Tailwind v4 SAFE)
 // ---------------------------------
+
 const colorMap = {
   orange: {
     card: "from-orange-50 to-orange-100 dark:from-orange-950/30 dark:to-orange-900/20 border-orange-200 dark:border-orange-800",

@@ -6,6 +6,7 @@ import { leetcodeStats as fallbackStats } from "@/data/leetcodeStats";
 import Link from "next/link";
 import CodeExample from "@/components/CodeExample";
 import { Intro } from "@/data/intro";
+import { FileJsonIcon } from "lucide-react";
 
 const HeroSection: FC = () => {
   const [totalSolvedProblems, setTotalSolvedProblems] = useState(
@@ -37,11 +38,17 @@ const HeroSection: FC = () => {
   return (
     <section className="relative overflow-hidden">
       {/* Animated background text */}
-      <div className="absolute top-10 right-10 text-orange-500/50 font-mono text-sm hidden lg:block">
-        &lt;algorithm /&gt;
+      <div className="absolute top-10 right-10 text-orange-500/50 font-mono text-2xl hidden lg:block">
+        {"<algorithms />"}
       </div>
-      <div className="absolute bottom-20 left-10 text-orange-500/50 font-mono text-4xl hidden lg:block">
-        DSA
+      <div className="absolute left-5 top-5 text-orange-500/50 font-mono text-4xl hidden lg:block">
+        <FileJsonIcon size={50} />
+      </div>
+      <div className="absolute bottom-40 left-30 text-orange-500/50 font-mono text-4xl hidden lg:block">
+        {"C++"}
+      </div>
+      <div className="absolute bottom-20 right-15 text-orange-500/50 font-mono text-4xl hidden lg:block">
+        {'<JS/>'}
       </div>
 
       <div className="md:max-w-7xl mx-auto sm:px-6 py-32 flex z-10 flex-col lg:grid lg:grid-cols-2 gap-12 items-center">

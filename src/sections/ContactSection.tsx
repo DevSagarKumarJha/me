@@ -19,24 +19,24 @@ const ContactSection = () => {
           viewport={{ once: true }}
           className="w-full"
         >
-          <Card className="rounded-2xl shadow-xl border border-orange-500/30 bg-white/70 dark:bg-gray-950/60 backdrop-blur-md">
+          <Card className="rounded-2xl shadow-xl border border-orange-500/30 bg-white/70 dark:bg-zinc-950/60 backdrop-blur-md">
             <CardHeader className="text-center space-y-4">
               <CardTitle className="text-3xl font-extrabold text-orange-700 dark:text-orange-400">
                 Let&apos;s Connect
               </CardTitle>
-              <p className="text-gray-600 dark:text-gray-400">
+              <p className="text-zinc-600 dark:text-zinc-400">
                 I&apos;m always open to discussing opportunities in software
                 development and system design.
               </p>
             </CardHeader>
 
-            <CardContent className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5 text-center">
+            <CardContent className="grid gap-6 grid-cols-5 text-center">
               {/* Email */}
               <div className="flex flex-col items-center gap-2">
                 <Mail className="w-6 h-6 text-orange-600 dark:text-orange-400" />
                 <a
                   href="mailto:devsagarkumarjha@gmail.com"
-                  className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400 transition"
+                  className="text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:text-orange-600 dark:hover:text-orange-400 transition"
                 >
                   Email
                 </a>
@@ -49,7 +49,7 @@ const ContactSection = () => {
                   href="https://github.com/DevSagarKumarJha"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400 transition"
+                  className="text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:text-orange-600 dark:hover:text-orange-400 transition"
                 >
                   GitHub
                 </a>
@@ -62,7 +62,7 @@ const ContactSection = () => {
                   href="https://linkedin.com/in/devsagarkumarjha"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400 transition"
+                  className="text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:text-orange-600 dark:hover:text-orange-400 transition"
                 >
                   LinkedIn
                 </a>
@@ -73,7 +73,7 @@ const ContactSection = () => {
                 <Phone className="w-6 h-6 text-orange-600 dark:text-orange-400" />
                 <a
                   href="tel:+919667207859"
-                  className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400 transition"
+                  className="text-sm font-medium text-zinc-700 dark:text-zinc-300 hover:text-orange-600 dark:hover:text-orange-400 transition"
                 >
                   Phone
                 </a>
@@ -82,7 +82,7 @@ const ContactSection = () => {
               {/* Location */}
               <div className="flex flex-col items-center gap-2">
                 <MapPin className="w-6 h-6 text-orange-600 dark:text-orange-400" />
-                <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                <p className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
                   Delhi, India
                 </p>
               </div>

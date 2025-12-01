@@ -21,7 +21,7 @@ const ProjectsSection = () => {
           viewport={{ once: true }}
           className="w-full"
         >
-          <Card className="rounded-2xl shadow-xl border border-orange-500/30 bg-white/70 dark:bg-gray-950/60 backdrop-blur-md">
+          <Card className="rounded-2xl shadow-xl border border-orange-500/30 bg-white/70 dark:bg-zinc-950/60 backdrop-blur-md">
             <CardHeader className="flex flex-col items-center text-center space-y-4">
               <div className="flex items-center gap-2 text-orange-600 dark:text-orange-400">
                 <FolderGit2 className="w-6 h-6" />
@@ -32,7 +32,7 @@ const ProjectsSection = () => {
             </CardHeader>
 
             <CardContent>
-              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              <div className="grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
                 {projects.map((project, index) => (
                   <motion.div
                     key={project.name}
@@ -40,13 +40,13 @@ const ProjectsSection = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="bg-white/60 dark:bg-gray-900/50 rounded-xl shadow-sm border border-orange-500/30 dark:border-orange-600/30 p-5 flex flex-col justify-between hover:border-orange-500/60 transition"
+                    className="bg-white/60 dark:bg-zinc-900/50 rounded-xl shadow-sm border border-orange-500/30 dark:border-orange-600/30 p-5 flex flex-col justify-between hover:border-orange-500/60 transition"
                   >
                     <div>
                       <h3 className="text-xl font-semibold text-orange-700 dark:text-orange-400 mb-2">
                         {project.name}
                       </h3>
-                      <p className="text-sm text-gray-600 dark:text-gray-300 mb-3">
+                      <p className="text-sm text-zinc-600 dark:text-zinc-300 mb-3">
                         {project.description}
                       </p>
                       {project.impact && (

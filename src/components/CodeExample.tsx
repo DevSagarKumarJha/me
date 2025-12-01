@@ -56,7 +56,7 @@ const CodeExample = ({
 
   return (
     <div
-      className={`relative rounded-md overflow-hidden border border-orange-300 inset-2 md:inset-4 z-50 flex flex-col
+      className={`relative rounded-md overflow-hidden border border-orange-300 inset-2 md:inset-4 z-50 flex flex-col 
       }`}
     >
       <div className="flex justify-start bg-gray-100 dark:bg-[#2a2a2a] border-b border-orange-300">
@@ -77,7 +77,7 @@ const CodeExample = ({
         className={`relative flex-1 justify-center items-center overflow-auto`}
       >
         <pre
-          className={"p-3 md:p-4 overflow-x-auto text-lg md:text-xl"}
+          className={"sm:p-4 overflow-x-auto text-xs sm:text-sm"}
           style={{ backgroundColor: "var(--code-bg, #0a0a0a)" }}
         >
           <code

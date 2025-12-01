@@ -20,7 +20,7 @@ const ExperienceEducationSection = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <Card className="rounded-2xl shadow-xl border border-orange-500/30 bg-white/70 dark:bg-gray-950/60 backdrop-blur-md">
+          <Card className="rounded-2xl shadow-xl border border-orange-500/30 bg-white/70 dark:bg-zinc-950/60 backdrop-blur-md">
             <CardHeader className="flex items-center gap-2 text-orange-600 dark:text-orange-400">
               <Briefcase className="w-6 h-6" />
               <CardTitle className="text-2xl font-bold">Experience</CardTitle>
@@ -39,10 +39,10 @@ const ExperienceEducationSection = () => {
                     <h3 className="text-lg font-semibold text-orange-700 dark:text-orange-300">
                       {exp.role} – {exp.title}
                     </h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                    <p className="text-sm text-zinc-600 dark:text-zinc-400">
                       {exp.period}
                     </p>
-                    <p className="mt-2 text-gray-700 dark:text-gray-300">
+                    <p className="mt-2 text-zinc-700 dark:text-zinc-300">
                       {exp.description}
                     </p>
                     <div className="flex flex-wrap gap-2 mt-3">
@@ -69,7 +69,7 @@ const ExperienceEducationSection = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <Card className="rounded-2xl shadow-xl border border-orange-500/30 bg-white/70 dark:bg-gray-950/60 backdrop-blur-md">
+          <Card className="rounded-2xl shadow-xl border border-orange-500/30 bg-white/70 dark:bg-zinc-950/60 backdrop-blur-md">
             <CardHeader className="flex items-center gap-2 text-orange-600 dark:text-orange-400">
               <GraduationCap className="w-6 h-6" />
               <CardTitle className="text-2xl font-bold">Education</CardTitle>
@@ -88,11 +88,11 @@ const ExperienceEducationSection = () => {
                     <h3 className="text-lg font-semibold text-orange-700 dark:text-orange-300">
                       {edu.degree}
                     </h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                    <p className="text-sm text-zinc-600 dark:text-zinc-400">
                       {edu.institution} • {edu.period}
                     </p>
                     {edu.description && (
-                      <p className="mt-2 text-gray-700 dark:text-gray-300">
+                      <p className="mt-2 text-zinc-700 dark:text-zinc-300">
                         {edu.description}
                       </p>
                     )}

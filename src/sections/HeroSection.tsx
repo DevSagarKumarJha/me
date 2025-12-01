@@ -19,7 +19,7 @@ const HeroSection: FC = () => {
         DSA
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 py-32 flex flex-col-reverse md:grid md:grid-cols-2 gap-12 items-center">
+      <div className="md:max-w-7xl mx-auto sm:px-6 py-32 flex z-10  flex-col lg:grid lg:grid-cols-2 gap-12 items-center">
         {/* Left Content */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -28,7 +28,7 @@ const HeroSection: FC = () => {
           className="space-y-6 tracking-tight"
         >
           <div className="inline-block px-4 py-2 rounded-full bg-orange-500/20 border border-orange-500/50 text-orange-400 text-sm font-semibold">
-            {`LeetCode Expert | ${leetcodeStats.totalSolved}+ Problems Solved`}
+            {`LeetCode Expert | 500+ Problems Solved`}
           </div>
 
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold leading-tight">
@@ -39,11 +39,11 @@ const HeroSection: FC = () => {
             </span>
           </h1>
 
-          <h2 className="text-xl sm:text-2xl  font-bold text-gray-700 dark:text-gray-200">
+          <h2 className="text-xl sm:text-2xl  font-bold text-zinc-700 dark:text-zinc-200">
             Full Stack Developer | MERN | Prisma
           </h2>
 
-          <p className="text-gray-600 max-w-lg text-lg">
+          <p className="text-zinc-600 max-w-lg text-lg">
             Passionate about writing optimal algorithms and scalable systems.
             Consistently solving complex problems across multiple platforms.
           </p>
@@ -67,7 +67,7 @@ const HeroSection: FC = () => {
             </Link>
             <Link
               href="#contacts"
-              className="px-6 py-3 rounded-lg border border-gray-500 text-gray-500 dark:text-gray-300 font-semibold hover:border-orange-500 hover:text-orange-400 transition-all"
+              className="px-6 py-3 rounded-lg border border-zinc-500 text-zinc-500 dark:text-zinc-300 font-semibold hover:border-orange-500 hover:text-orange-400 transition-all"
             >
               Contact Me
             </Link>
@@ -94,6 +94,8 @@ const HeroSection: FC = () => {
           </motion.div>
         </motion.div>
       </div>
+
+      
     </section>
   );
 };

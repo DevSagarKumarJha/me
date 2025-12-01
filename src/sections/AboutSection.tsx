@@ -19,7 +19,7 @@ const AboutSection = () => {
           viewport={{ once: true }}
           className="w-full"
         >
-          <Card className="rounded-2xl shadow-xl border border-orange-500/30 bg-white/70 dark:bg-gray-950/60 backdrop-blur-md">
+          <Card className="rounded-2xl shadow-xl border border-orange-500/30 bg-white/70 dark:bg-zinc-950/60 backdrop-blur-md">
             <CardHeader className="flex flex-col items-center text-center space-y-4">
               <div className="flex items-center gap-2 text-orange-600 dark:text-orange-400">
                 <UserIcon className="w-6 h-6" />
@@ -30,7 +30,7 @@ const AboutSection = () => {
             </CardHeader>
 
             <CardContent>
-              <div className="text-gray-700 dark:text-gray-300 leading-relaxed space-y-4 text-center md:text-left">
+              <div className="text-zinc-700 dark:text-zinc-300 leading-relaxed space-y-4 text-center md:text-left">
                 <p>
                   I&apos;m a Full Stack Developer and Software Engineer with a
                   strong foundation in Data Structures, Algorithms, and System

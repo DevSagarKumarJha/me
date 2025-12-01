@@ -18,7 +18,7 @@ const FooterSection = () => {
         className="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row justify-between items-center gap-6"
       >
         {/* Branding */}
-        <p className="text-gray-600 dark:text-gray-400 text-sm">
+        <p className="text-zinc-600 dark:text-zinc-400 text-sm">
           © {new Date().getFullYear()} Sagar Kumar Jha. All rights reserved. |
           LeetCode Expert
         </p>
@@ -29,7 +29,7 @@ const FooterSection = () => {
             href="mailto:devsagarkumarjha@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-600 hover:text-orange-600 dark:text-gray-400 dark:hover:text-orange-400 transition"
+            className="text-zinc-600 hover:text-orange-600 dark:text-zinc-400 dark:hover:text-orange-400 transition"
           >
             <Mail className="w-5 h-5" />
           </a>
@@ -37,7 +37,7 @@ const FooterSection = () => {
             href="https://github.com/DevSagarKumarJha"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-600 hover:text-orange-600 dark:text-gray-400 dark:hover:text-orange-400 transition"
+            className="text-zinc-600 hover:text-orange-600 dark:text-zinc-400 dark:hover:text-orange-400 transition"
           >
             <Github className="w-5 h-5" />
           </a>
@@ -45,7 +45,7 @@ const FooterSection = () => {
             href="https://www.linkedin.com/in/devsagarkumarjha"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-600 hover:text-orange-600 dark:text-gray-400 dark:hover:text-orange-400 transition"
+            className="text-zinc-600 hover:text-orange-600 dark:text-zinc-400 dark:hover:text-orange-400 transition"
           >
             <Linkedin className="w-5 h-5" />
           </a>

@@ -10,6 +10,7 @@ import "prismjs/components/prism-css";
 import "prismjs/components/prism-scss";
 import "prismjs/components/prism-bash";
 import "prismjs/components/prism-json";
+import { useMediaQuery } from "@/lib/useMediaQuery";
 
 interface CodeExampleProps {
   code?: string;
@@ -35,7 +36,8 @@ export default function CodeExample({
 }: CodeExampleProps) {
   const codeRef = useRef<HTMLElement | null>(null);
   const resolvedLang = langMap[language] || language;
-
+  const isDesktop = useMediaQuery("(min-width: 768px)");
+const fSize = isDesktop ? "15px" : "10px";
   useEffect(() => {
     if (codeRef.current) Prism.highlightElement(codeRef.current);
   }, [code, resolvedLang]);
@@ -60,11 +62,11 @@ export default function CodeExample({
       {/* Code Container */}
       <div className="relative max-h-[60vh] sm:max-h-[75vh]">
         <pre
-          className="p-3 sm:p-4 text-xs sm:text-sm"
-          style={{ backgroundColor: "#0a0a0a" }}
+          className="p-2 sm:p-4 overflow-x-scroll overflow-y-scroll"
+          style={{ backgroundColor: "#0a0a0a", fontSize:fSize }}
           tabIndex={0}
         >
-          <code ref={codeRef} className={`language-${resolvedLang} `}>
+          <code ref={codeRef} className={`language-${resolvedLang}`}>
             {code}
           </code>
         </pre>

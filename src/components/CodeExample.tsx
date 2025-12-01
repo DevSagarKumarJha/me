@@ -15,7 +15,6 @@ interface CodeExampleProps {
   code?: string;
   language?: string;
   fileName?: string;
-  copyable?: boolean;
 }
 
 const langMap: Record<string, string> = {
@@ -42,34 +41,30 @@ export default function CodeExample({
   }, [code, resolvedLang]);
 
   return (
-    <div className="relative rounded-md overflow-hidden border border-orange-300 inset-2 md:inset-4 z-50 flex flex-col">
-      {/* Top bar */}
-      <div className="flex justify-start bg-gray-100 dark:bg-[#2a2a2a] border-b border-orange-300">
-        <div className="flex justify-center items-center gap-1 pl-4 pr-2">
-          <div className="bg-red-500 p-2 rounded-full"></div>
-          <div className="bg-yellow-500 p-2 rounded-full"></div>
-          <div className="bg-green-500 p-2 rounded-full"></div>
+    <div className="relative rounded-lg overflow-hidden border border-orange-300 bg-[#1a1a1a] w-full">
+      {/* Top Bar */}
+      <div className="flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-[#262626] border-b border-orange-300">
+        <div className="flex items-center gap-2">
+          <span className="w-3 h-3 rounded-full bg-red-500"></span>
+          <span className="w-3 h-3 rounded-full bg-yellow-500"></span>
+          <span className="w-3 h-3 rounded-full bg-green-500"></span>
         </div>
 
         {fileName && (
-          <div className="flex items-center w-full py-1.5 md:py-2 text-gray-700 dark:text-gray-200 text-lg">
+          <p className="text-sm sm:text-base ml-3 text-gray-700 dark:text-gray-300 truncate">
             {fileName}
-          </div>
+          </p>
         )}
       </div>
 
       {/* Code Container */}
-      <div className="relative flex-1 justify-center items-center overflow-auto">
+      <div className="relative max-h-[60vh] sm:max-h-[75vh]">
         <pre
-          className={`sm:p-4 overflow-x-auto text-xs sm:text-sm`}
-          // 👇 static style (no dynamic values = SSR safe)
-          style={{ backgroundColor: "var(--code-bg, #0a0a0a)" }}
-          tabIndex={0} // 👈 explicitly added (fix mismatch)
+          className="p-3 sm:p-4 text-xs sm:text-sm"
+          style={{ backgroundColor: "#0a0a0a" }}
+          tabIndex={0}
         >
-          <code
-            ref={codeRef}
-            className={`language-${resolvedLang}`} // 👈 stable on server + client
-          >
+          <code ref={codeRef} className={`language-${resolvedLang} `}>
             {code}
           </code>
         </pre>

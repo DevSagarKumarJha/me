@@ -48,7 +48,7 @@ const HeroSection: FC = () => {
         {"C++"}
       </div>
       <div className="absolute bottom-20 right-15 text-orange-500/50 font-mono text-4xl hidden lg:block">
-        {'<JS/>'}
+        {"<JS/>"}
       </div>
 
       <div className="md:max-w-7xl mx-auto sm:px-6 py-32 flex z-10 flex-col lg:grid lg:grid-cols-2 gap-12 items-center">
@@ -106,21 +106,21 @@ const HeroSection: FC = () => {
           </div>
         </motion.div>
 
-        {/* RIGHT SIDE */}
+        {/* RIGHT SIDE — FIXED */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-          className="flex justify-center h-full"
+          initial={{ opacity: 0, scale: 0.8, rotateX: 15 }}
+          animate={{ opacity: 1, scale: 1, rotateX: 0 }}
+          transition={{ duration: 0.9, ease: "easeOut" }}
+          className="flex justify-center w-full"
         >
           <motion.div
-            animate={{ y: [50, 0, 50] }}
+            animate={{ y: [20, 0, 20] }}
             transition={{
               duration: 4,
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="w-full"
+            className="w-full max-w-md mx-auto"
           >
             <CodeExample code={Intro} fileName="intro.json" language="json" />
           </motion.div>

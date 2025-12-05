@@ -90,7 +90,7 @@ const HeroSection: FC = () => {
             </Link>
 
             <Link
-              href="https://drive.google.com/file/d/1BeBRuNNMUZumdOR9IxcGV-G9VTjfj6I4/view?usp=sharing"
+              href="https://drive.google.com/file/d/1FxN6WqHdYSbnd5g4Ki1s054Lhf3mqbZq/view"
               target="_blank"
               className="px-6 py-3 rounded-lg border border-orange-500 text-orange-400 font-semibold hover:bg-orange-500/10 transition-all"
             >

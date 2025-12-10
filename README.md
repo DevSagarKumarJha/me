@@ -1,6 +1,6 @@
 <div align="center">
   
-# Hey, I'm Aditya 👋
+# Hey, I'm Sagar 👋
 
 <img src="./unnamed.gif" alt="Animation" />
 
@@ -47,8 +47,8 @@ hobbies: ["Coding", "Gaming", "Reading", "Building Side Projects"]
 
 💙 TypeScript
 🍵 Java
-💀 HTML
-🎨 CSS
+💀 HTML/CSS
+Next.js
 ⚡ JavaScript
 
 <!-- STACK:END -->

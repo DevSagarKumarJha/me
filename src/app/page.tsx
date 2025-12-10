@@ -1,22 +1,25 @@
 import { Navbar } from "@/components/Navbar";
 import GalaxyComponent from "@/components/ui/galaxy-component";
 import AboutSection from "@/sections/AboutSection";
-import ContactSection from "@/sections/ContactSection";
 import ExperienceEducationSection from "@/sections/ExperienceEducationSection";
 import FooterSection from "@/sections/FooterSection";
 import HeroSection from "@/sections/HeroSection";
-import LeetCodeSection from "@/sections/LeetCodeSection";
+import LeetCodeSection from "@/components/LeetCodeStatusComponent";
 import ProjectsSection from "@/sections/ProjectsSection";
 import SkillsSection from "@/sections/SkillsSection";
 import Image from "next/image";
+import ContactComponent from "@/components/ContactComponent";
+import { sociallinks } from "@/data/intro";
 
 export default function Home() {
-  
 
   return (
     <>
       <Navbar />
 
+      {/* <LeetCodeSection/> */}
+      <ContactComponent links={sociallinks} />
+      {/* 
       <main className="mx-auto px-4">
         <HeroSection />
 
@@ -48,14 +51,15 @@ export default function Home() {
 
           <main className="md:w-2/3 space-y-4">
             <AboutSection />
-            <ExperienceEducationSection />
             <ProjectsSection />
+            <ExperienceEducationSection />
           </main>
         </div>
       </main>
       <FooterSection />
       <div className="top-40 right-20 -z-10 fixed bg-yellow-400/20 dark:bg-orange-500/15 blur-3xl rounded-full w-72 h-72 animate-out"></div>
-      <div className="bottom-40 left-20 -z-10 fixed bg-yellow-400/25 dark:bg-orange-500/10 blur-3xl rounded-full animate-in w-80 h-80"></div>
+      <div className="bottom-40 left-20 -z-10 fixed bg-yellow-400/25 dark:bg-orange-500/10 blur-3xl rounded-full animate-in w-80 h-80"></div> 
+*/}
     </>
   );
 }

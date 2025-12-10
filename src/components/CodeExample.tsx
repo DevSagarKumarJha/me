@@ -37,7 +37,7 @@ export default function CodeExample({
   const codeRef = useRef<HTMLElement | null>(null);
   const resolvedLang = langMap[language] || language;
   const isDesktop = useMediaQuery("(min-width: 768px)");
-const fSize = isDesktop ? "15px" : "10px";
+  const fSize = isDesktop ? "15px" : "10px";
   useEffect(() => {
     if (codeRef.current) Prism.highlightElement(codeRef.current);
   }, [code, resolvedLang]);
@@ -63,7 +63,7 @@ const fSize = isDesktop ? "15px" : "10px";
       <div className="relative max-h-[60vh] sm:max-h-[75vh]">
         <pre
           className="p-2 sm:p-4 overflow-x-scroll overflow-y-scroll"
-          style={{ backgroundColor: "#0a0a0a", fontSize:fSize }}
+          style={{ backgroundColor: "#0a0a0a", fontSize: fSize }}
           tabIndex={0}
         >
           <code ref={codeRef} className={`language-${resolvedLang}`}>

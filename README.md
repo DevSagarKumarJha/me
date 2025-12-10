@@ -47,8 +47,8 @@ hobbies: ["Coding", "Gaming", "Reading", "Building Side Projects"]
 
 💙 TypeScript
 🍵 Java
-💀 HTML/CSS
-Next.js
+🌐 HTML/CSS
+Next js
 ⚡ JavaScript
 
 <!-- STACK:END -->

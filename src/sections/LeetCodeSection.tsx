@@ -69,7 +69,7 @@ const LeetCodeSection = async () => {
             <div className="flex items-center justify-center gap-4 mb-4">
               <Code2 className="w-10 h-10 text-orange-500" />
               <div className="text-left">
-                <h2 className="text-xl sm:text-3xl font-bold text-orange-700 dark:text-orange-400">
+                <h2 className="text-xl sm:text-3xl font-bold text-orange-600 dark:text-orange-400">
                   LeetCode Stats
                 </h2>
                 <div className="text-sm text-zinc-600 dark:text-zinc-400">

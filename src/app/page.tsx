@@ -54,8 +54,8 @@ export default function Home() {
         </div>
       </main>
       <FooterSection />
-      <div className="top-40 right-20 z-0 fixed bg-yellow-400/40 dark:bg-orange-500/15 blur-3xl rounded-full w-72 h-72 animate-out"></div>
-      <div className="bottom-40 left-20 z-0 fixed bg-yellow-500/35 dark:bg-orange-500/10 blur-3xl rounded-full animate-in w-80 h-80"></div>
+      <div className="top-40 right-20 -z-10 fixed bg-yellow-400/20 dark:bg-orange-500/15 blur-3xl rounded-full w-72 h-72 animate-out"></div>
+      <div className="bottom-40 left-20 -z-10 fixed bg-yellow-400/25 dark:bg-orange-500/10 blur-3xl rounded-full animate-in w-80 h-80"></div>
     </>
   );
 }

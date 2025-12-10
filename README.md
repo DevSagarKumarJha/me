@@ -6,7 +6,7 @@
 
 
 <!-- TYPING:START -->
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=70A5FD&center=true&vCenter=true&width=495&lines=Building Web Apps;Full-Stack Engineering" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=70A5FD&center=true&vCenter=true&width=495&lines=Building+Web+Apps;TypeScript+Development" alt="Typing SVG" />
 <!-- TYPING:END -->
 
 
@@ -46,12 +46,10 @@ hobbies: ["Coding", "Gaming", "Reading", "Building Side Projects"]
 ### 🛠 Currently Working With
 
 <!-- STACK:START -->
-
-💙 TypeScript
-🍵 Java
-🌐 HTML/CSS
-⚡ JavaScript
-
+  ⚡ JavaScript
+  💙 TypeScript
+  🎨 CSS
+  🌐 HTML/CSS
 <!-- STACK:END -->
 
 > _Auto-detected from my recent repositories_

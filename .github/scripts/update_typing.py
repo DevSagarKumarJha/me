@@ -3,7 +3,7 @@ import re
 import os
 
 # CONFIG
-GITHUB_USERNAME = "addynoven"
+GITHUB_USERNAME = "devsagarkumarjha"
 README_PATH = "README.md"
 
 # Language to status mapping - customize these!

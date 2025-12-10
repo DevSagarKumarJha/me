@@ -44,13 +44,10 @@ hobbies: ["Coding", "Gaming", "Reading", "Building Side Projects"]
 ### 🛠 Currently Working With
 
 <!-- STACK:START -->
-
-💙 TypeScript
-🍵 Java
-🌐 HTML/CSS
-Next js
-⚡ JavaScript
-
+  ⚡ JavaScript
+  💙 TypeScript
+  🎨 CSS
+  🌐 HTML/CSS
 <!-- STACK:END -->
 
 > _Auto-detected from my recent repositories_

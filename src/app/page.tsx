@@ -1,7 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import GalaxyComponent from "@/components/ui/galaxy-component";
 import AboutSection from "@/sections/AboutSection";
-import ExperienceEducationSection from "@/sections/ExperienceEducationSection";
+import ExperienceEducationComponent from "@/components/ExperienceEducationComponent";
 import FooterSection from "@/sections/FooterSection";
 import HeroSection from "@/sections/HeroSection";
 import LeetCodeSection from "@/components/LeetCodeStatusComponent";
@@ -12,13 +12,16 @@ import ContactComponent from "@/components/ContactComponent";
 import { sociallinks } from "@/data/intro";
 
 export default function Home() {
-
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
 
-      {/* <LeetCodeSection/> */}
-      <ContactComponent links={sociallinks} />
+      <main className="max-w-5xl m-auto">
+      {/* <LeetCodeSection/>
+      <ContactComponent links={sociallinks} /> */}
+      
+      </main>
+
       {/* 
       <main className="mx-auto px-4">
         <HeroSection />

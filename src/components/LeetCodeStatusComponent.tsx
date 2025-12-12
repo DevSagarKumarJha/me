@@ -38,7 +38,7 @@ const LeetCodeStatusComponent = async () => {
   const stats = await getLeetCodeStats();
 
   return (
-    <section className="rounded-2xl shadow-xl border border-orange-500/30 bg-white/70 dark:bg-zinc-950/60 backdrop-blur-md">
+    <section className="rounded shadow-md sm:min-w-xs w-full border border-black/15 dark:border-white/15 backdrop-blur">
       {/* <AnimatedSection> */}
       <div className="px-4 py-6">
         {/* HEADER */}
@@ -50,14 +50,13 @@ const LeetCodeStatusComponent = async () => {
                 LeetCode Stats
               </h2>
               <div className="text-sm text-zinc-600 dark:text-zinc-400">
-                @{stats.username}
                 <a
                   href={stats.profileUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="ml-3 inline-block px-3 py-1 text-xs font-medium rounded-full bg-orange-50 text-orange-600 border border-orange-200 hover:bg-orange-100 transition"
-                >
-                  View Profile
+                  className="ml-3 inline-block px-3 py-1 text-xs font-medium hover:underline"
+                  >
+                  @{stats.username}
                 </a>
               </div>
             </div>
@@ -154,7 +153,7 @@ const DiffBlock = ({ label, value }: { label: string; value: number }) => {
   if (label === "Easy") {
     color = "text-green-700 dark:text-green-400 font-semibold";
   } else if (label === "Medium") {
-    color = "text-yellow-500 dark:text-yellow-400 font-semibold";
+    color = "text-yellow-600 dark:text-yellow-400 font-semibold";
   } else {
     color = "text-orange-700 dark:text-orange-400 font-semibold";
   }

@@ -5,7 +5,6 @@ import { AnimatedContactWrapper } from "./ui/AnimatedContactWrapper";
 interface LinkItem {
   icon: IconType;
   url: string;
-  IconClass?: string;
 }
 
 interface LinkProps {
@@ -22,9 +21,9 @@ const ContactComponent: React.FC<LinkProps> = ({ links }) => {
             <div key={link.url}>
               <a
                 href={link.url}
-                className={`text-2xl transition-colors ${link.IconClass}`}
+                className={`text-2xl hover:opacity-90`}
               >
-                <Icon />
+                <Icon className=""/>
               </a>
             </div>
           );

@@ -13,6 +13,7 @@ import { BiBookOpen, BiGitCommit, BiSolidLocationPlus } from "react-icons/bi";
 import LocationTime from "./LocationTime";
 import { FiZap } from "react-icons/fi";
 import LatestCommitActivity from "./LatestCommitActivity";
+import { ActivityIcon } from "lucide-react";
 
 const ActivityCard = ({
   className,
@@ -35,14 +36,13 @@ const ActivityCard = ({
     <>
       <div className="flex items-center justify-between mb-2">
         <div className="flex items-center gap-2 text-muted-foreground group-hover:text-foreground transition-colors">
-          <Icon size={13} className="shrink-0" />
-          <span className="text-[10px] font-semibold uppercase tracking-widest">
+          <Icon className="shrink-0" />
+          <span className="text-sm font-semibold uppercase tracking-widest">
             {label}
           </span>
         </div>
         {actionIcon && (
           <BsArrowUpRight
-            size={14}
             className="text-muted-foreground/30 group-hover:text-foreground group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300"
           />
         )}
@@ -90,6 +90,7 @@ export default function Activities() {
   const [graphUrl, setGraphUrl] = useState<string>(dark_url);
   const [imageError, setImageError] = useState<boolean>(true);
 
+
   // Handle mounting to avoid hydration mismatch
   useEffect(() => {
     setMounted(true);
@@ -109,12 +110,12 @@ export default function Activities() {
   }, [resolvedTheme, mounted]);
 
   return (
-    <section className="mt-24 space-y-6">
-      <div className="flex items-center gap-3 mb-6">
-        <h2 className="text-lg font-semibold tracking-tight text-foreground/90">
-          Activity Feed
-        </h2>
-        <div className="h-px bg-border/40 flex-1" />
+    <section className="mt-24 space-y-6 px-3 py-2">
+      <div className="flex items-center justify-center gap-4 mb-6">
+        <ActivityIcon className="w-10 h-10 text-black dark:text-white" />
+        <div>
+          <h2 className="text-xl sm:text-2xl font-bold">My Activities</h2>
+        </div>
       </div>
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
@@ -160,7 +161,10 @@ export default function Activities() {
           actionIcon={false}
           className="min-h-[110px]"
         >
-          <span className="italic block mt-1 truncate" title="LOTM >.<">
+          <span
+            className="italic block mt-1 truncate"
+            title="MDN - data attributes"
+          >
             &quot;MDN - data attributes&quot;
           </span>
         </ActivityCard>
@@ -185,7 +189,7 @@ export default function Activities() {
           actionIcon={false}
           className="min-h-[110px]"
         >
-          <div className="line-clamp-3" title="Building my personal site 🚀">
+          <div className="line-clamp-3" title="Building my own leetcode 🚀">
             Building my codescore... 🚀
           </div>
         </ActivityCard>
@@ -203,7 +207,7 @@ export default function Activities() {
 
             <div className="p-2 overflow-hidden">
               {!mounted ? (
-                <div className="h-[120px] animate-pulse rounded-lg bg-zinc-200 dark:bg-zinc-800" />
+                <div className="h-fit animate-pulse rounded-lg bg-zinc-200 dark:bg-zinc-800" />
               ) : !imageError ? (
                 <img
                   src={graphUrl}

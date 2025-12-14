@@ -13,9 +13,9 @@ export default function DiscordStatusInline() {
   if (!discordStatus) return <>Unknown</>;
 
   if (discordStatus === "online") {
-    return <span className="text-green-500 font-medium">Online</span>;
+    return <span className="text-green-700 dark:text-green-500 font-medium">Online</span>;
   } else if (discordStatus === "idle") {
-    return <span className="text-yellow-500 font-medium">Idle</span>;
+    return <span className="text-yellow-700 dark:text-yellow-500 font-medium">Idle</span>;
   } else if (discordStatus === "dnd") {
     return <span className="text-red-500 font-medium">DND</span>;
   } else {

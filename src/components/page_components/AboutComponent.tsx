@@ -1,12 +1,12 @@
 import React from "react";
 
 import { InfoIcon } from "lucide-react";
-import { AnimatedTopSection } from "../wrappers/AnimatedTopSection";
+
 
 const AboutComponent: React.FC = () => {
   return (
-    <AnimatedTopSection>
-      <div className=" shadow-md flex flex-col border px-2 py-1 border-black/15 dark:border-white/15">
+    
+      <div className=" shadow-md flex flex-col px-2 py-1 ">
         <div className="flex items-center justify-start gap-2 my-6">
           <InfoIcon className="w-10 h-10 text-black dark:text-white" />
           <div>
@@ -28,7 +28,7 @@ const AboutComponent: React.FC = () => {
           </p>
         </article>
       </div>
-    </AnimatedTopSection>
+    
   );
 };
 

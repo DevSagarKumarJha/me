@@ -8,12 +8,12 @@ import React from "react";
 
 const AboutPage = () => {
   return (
-    <div className="sm:py-12 py-3">
+    <main>
       <AboutComponent/>
       <ToolsAndTechComponent categories={categories}/>
       <GithubCalendarComponent/>
       <LeetCodeStatusComponent/>
-    </div>
+    </main>
   );
 };
 

@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 const GITHUB_API_URL =
-  "https://api.github.com/repos/MannuVilasara/me/commits/main";
+  "https://api.github.com/repos/DevSagarKumarJha/me/commits/main";
 
 export async function GET() {
   try {

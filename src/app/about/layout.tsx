@@ -12,7 +12,7 @@ export default function AboutPageLayout({
   children: React.ReactNode;
 }) {
   return (
-    <main className="max-w-5xl mx-auto">
+    <main className="max-w-4xl mx-auto sm:py-12 py-3">
         {children}
     </main>
   );

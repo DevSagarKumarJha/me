@@ -29,12 +29,12 @@ export default function RootLayout({
     <html lang="en">
       <head></head>
       <body
-        className={`${notoSans.variable} ${roboto.variable} antialiased bg-white dark:bg-black/80`}
+        className={`${notoSans.variable} ${roboto.variable} antialiased bg-white dark:bg-black/80 max-w-4xl mx-auto`}
       >
         <ThemeProviderWrapper>
-          <Navbar/>
+          <Navbar />
           {children}
-          <FooterSection/>
+          <FooterSection />
         </ThemeProviderWrapper>
       </body>
     </html>

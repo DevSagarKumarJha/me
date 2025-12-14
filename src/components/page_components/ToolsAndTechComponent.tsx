@@ -25,7 +25,9 @@ const ToolsAndTechComponent: React.FC<ToolsAndTechProps> = ({ categories }) => {
         <div className="flex items-center justify-center gap-4 mb-6">
           <Settings className="w-10 h-10 animate-spin text-black dark:text-white" />
           <div>
-            <h2 className="text-xl sm:text-2xl font-bold">Tools & Technologies</h2>
+            <h2 className="text-xl sm:text-2xl font-bold">
+              Tools & Technologies
+            </h2>
           </div>
         </div>
 
@@ -39,7 +41,7 @@ const ToolsAndTechComponent: React.FC<ToolsAndTechProps> = ({ categories }) => {
               {category.skills.map((skill, j) => (
                 <div
                   key={j}
-                  className="flex items-center gap-3 border shadow border-black/15 dark:border-white/15 p-4 rounded-xl hover:border-black/30 hover:dark:border-white/30 transition "
+                  className="group relative flex gap-2 p-3 sm:p-4 rounded-xl border transition-all duration-300 overflow-hidden backdrop-blur-sm bg-white border-zinc-200 hover:border-zinc-300 hover:shadow-sm dark:bg-zinc-900/30 dark:border-zinc-800/50 dark:hover:bg-zinc-900/50 dark:hover:border-zinc-700"
                 >
                   <skill.icon className="text-4xl" />
 

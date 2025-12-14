@@ -4,7 +4,7 @@ import { FC, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { leetcodeStats as fallbackStats } from "@/data/leetcodeStats";
 import Link from "next/link";
-import CodeExample from "@/components/CodeExample";
+import CodeExample from "@/components/page_components/CodeExample";
 import { Intro } from "@/data/intro";
 import { FileJsonIcon } from "lucide-react";
 
@@ -122,7 +122,7 @@ const HeroSection: FC = () => {
             }}
             className="w-full max-w-md mx-auto"
           >
-            <CodeExample code={Intro} fileName="intro.json" language="json" />
+            <CodeExample code={JSON.stringify(Intro)} fileName="intro.json" language="json" />
           </motion.div>
         </motion.div>
       </div>

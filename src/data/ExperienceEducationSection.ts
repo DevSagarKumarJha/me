@@ -1,6 +1,7 @@
 const experiences = [
   {
     title: "Chaicode",
+    url: "https://courses.chaicode.com/learn/certificate/10237680-%20214298",
     role: "Full Stack Web Development Cohort",
     period: "Jan 2025 – Jun 2025",
     description:
@@ -14,6 +15,7 @@ const experiences = [
   },
   {
     title: "Learn Yard",
+    url:"https://drive.google.com/file/d/1qiKleMMghKOyruAaabKYcfl4wlRdpGYb/view?usp=drive_link",
     role: "DSA & Software Engineering Bootcamp",
     period: "Aug 2024 – Mar 2025",
     description:
@@ -32,21 +34,24 @@ const education = [
   {
     institution: "Indira Gandhi National Open University",
     degree: "Bachelor of Computer Applications (BCA)",
-    period: "Jan 2019 – Jul 2024",
+    period: "July 2019 – Jul 2024",
+    gap: "July 2020 - July 2022",
     description:
-      "Comprehensive computer science education with specialization in web development, Java programming, and data structures. Developed strong foundation in software engineering principles and database management.",
-    skills: ["Java", "C++", "SQL", "Next.js", "React", "Tailwind CSS", "OOP"],
+      "Completed with 58.9%",
+    specialization: "Computer Science",
   },
   {
     institution: "Central Board of Secondary Education (CBSE)",
     degree: "Higher Secondary (Class 12) - Science",
     period: "2017 – 2019",
-    specialization: "Mathematics & Computer Science",
+    description:"Passed with 70%",
+    specialization: "PCM + Computer Science",
   },
   {
     institution: "Central Board of Secondary Education (CBSE)",
     degree: "Secondary School (Class 10)",
     period: "2015 – 2017",
+    description:"Passed with 8.8 CGPA",
   },
 ];
 

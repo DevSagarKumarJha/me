@@ -29,6 +29,7 @@ const FooterSection = () => {
             href="mailto:devsagarkumarjha@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="email"
             className="text-zinc-600 hover:text-orange-600 dark:text-zinc-400 dark:hover:text-orange-400 transition"
           >
             <Mail className="w-5 h-5" />
@@ -36,12 +37,14 @@ const FooterSection = () => {
           <a
             href="https://github.com/DevSagarKumarJha"
             target="_blank"
+            aria-label="my_github_profile"
             rel="noopener noreferrer"
             className="text-zinc-600 hover:text-orange-600 dark:text-zinc-400 dark:hover:text-orange-400 transition"
-          >
+            >
             <Github className="w-5 h-5" />
           </a>
           <a
+            aria-label="my_linkedin_profile"
             href="https://www.linkedin.com/in/devsagarkumarjha"
             target="_blank"
             rel="noopener noreferrer"

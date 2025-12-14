@@ -1,63 +1,89 @@
+import { ToolCase } from "lucide-react";
+import { BiLogoJavascript, BiLogoTypescript, BiLogoVisualStudio } from "react-icons/bi";
+import { MdStorage } from "react-icons/md";
+import { RiNextjsFill, RiNodejsFill, RiReactjsFill, RiTailwindCssFill } from "react-icons/ri";
+import { SiAmazonwebservices, SiApachekafka, SiDocker, SiExpress, SiGithubactions, SiInternetcomputer, SiMongodb, SiOpenai, SiPostgresql, SiPostman } from "react-icons/si";
+import { TbWorldWww } from "react-icons/tb";
+
+
+
 export const categories = [
   {
-    title: "Frontend Development",
+    title: "Web - Development",
+    icon: TbWorldWww,
     skills: [
-      "React.js",
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "HTML/CSS",
-      "Responsive Design",
-      "WCAG Accessibility",
-      "Component Architecture",
+      {
+        language: "JavaScript",
+        description: "Languages of the web",
+        icon: BiLogoJavascript,
+      },
+      {
+        language: "TypeScript",
+        description: "JavaScript with Types",
+        icon: BiLogoTypescript,
+      },
+      {
+        language: "NodeJS",
+        description: "JavaScript Run-time Engine",
+        icon: RiNodejsFill,
+      },
+      {
+        language: "ReactJS",
+        description: "A JavaScript Library",
+        icon: RiReactjsFill,
+      },
+      {
+        language: "NextJS",
+        description: "React Framework",
+        icon: RiNextjsFill,
+      },
+      {
+        language: "Tailwind CSS",
+        description: "CSS Framework",
+        icon: RiTailwindCssFill,
+      },
+      {
+        language: "Express JS",
+        description: "Web Framework for Node.js",
+        icon: SiExpress,
+      },
     ],
   },
   {
-    title: "Backend Development",
+    title: "Tools And Platforms",
+    icon: ToolCase,
     skills: [
-      "Node.js",
-      "Express.js",
-      "REST APIs",
-      "Authentication (JWT/OAuth)",
-      "Database Design",
-      "API Architecture",
-      "Microservices",
+      {
+        language: "Git & GitHub",
+        description: "Version Control",
+        icon: RiNodejsFill,
+      },
+      { language: "VS Code", description: "Code Editor", icon: BiLogoVisualStudio },
+      { language: "Postman", description: "API Testing", icon: SiPostman },
+      { language: "OpenAI", description: "LLM", icon: SiOpenai },
     ],
   },
   {
-    title: "Databases & Infrastructure",
-    skills: [
-      "MongoDB",
-      "MySQL",
-      "Database Optimization",
-      "Firebase",
-      "Vercel",
-      "Cloud Deployment",
-    ],
+    title: "Database And Storage",
+    icon: MdStorage,
+    skills: [{ language: "PostgreSQL", description: "Relational DB", icon: SiPostgresql }, {
+      language: "MongoDB",
+      description: "NoSQL DB ",
+      icon: SiMongodb
+    }],
   },
   {
-    title: "Languages & CS Fundamentals",
+    title: "Devops And Cloud",
+    icon: ToolCase,
     skills: [
-      "JavaScript",
-      "TypeScript",
-      "Java",
-      "C++",
-      "Python",
-      "Data Structures & Algorithms",
-      "Object-Oriented Design",
-      "System Design",
-    ],
-  },
-  {
-    title: "Development Tools & Practices",
-    skills: [
-      "Git & GitHub",
-      "VS Code",
-      "npm/yarn",
-      "Testing & Debugging",
-      "Agile Development",
-      "Code Review",
-      "Performance Optimization",
-    ],
+      { language: "AWS", description: "Containerization", icon: SiAmazonwebservices }
+      ,
+      { language: "CI/CD", description: "CI/CD with Github Actions", icon: SiGithubactions }
+      ,
+      { language: "Docker", description: "Cloud Computing", icon: SiDocker }
+      ,
+      { language: "Apache", description: "Distributed Streaming Platform", icon: SiApachekafka }
+  
+  ],
   },
 ];

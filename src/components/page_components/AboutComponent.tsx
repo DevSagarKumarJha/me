@@ -1,14 +1,18 @@
 import React from "react";
-import LeetCodeStatusComponent from "./LeetCodeStatusComponent";
+
+import { InfoIcon } from "lucide-react";
+import { AnimatedTopSection } from "../wrappers/AnimatedTopSection";
 
 const AboutComponent: React.FC = () => {
   return (
-    <div className=" flex flex-col-reverse sm:flex-row  justify-center items-center sm:items-start sm:justify-start p-1 gap-2">
-      <LeetCodeStatusComponent />
+    <AnimatedTopSection>
       <div className=" shadow-md flex flex-col border px-2 py-1 border-black/15 dark:border-white/15">
-        <h1 className="text-2xl sm:text-4xl py-2 sm:py-4 font-bold text-center">
-          About Me
-        </h1>
+        <div className="flex items-center justify-start gap-2 my-6">
+          <InfoIcon className="w-10 h-10 text-black dark:text-white" />
+          <div>
+            <h2 className="text-2xl sm:text-3xl font-bold">About Me</h2>
+          </div>
+        </div>
         <article className="sm:p-4 p-2 text-wrap tracking-wider flex flex-col text-lg sm:text-xl text-gray-800 dark:text-gray-200 italic">
           <p>
             I am a <strong>Full Stack Developer</strong> with a passion for
@@ -24,7 +28,7 @@ const AboutComponent: React.FC = () => {
           </p>
         </article>
       </div>
-    </div>
+    </AnimatedTopSection>
   );
 };
 

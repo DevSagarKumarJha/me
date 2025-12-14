@@ -4,7 +4,7 @@ import { FC, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { leetcodeStats as fallbackStats } from "@/data/leetcodeStats";
 import Link from "next/link";
-import CodeExample from "@/components/CodeExample";
+import CodeExample from "@/components/page_components/CodeExample";
 import { Intro } from "@/data/intro";
 import { FileJsonIcon } from "lucide-react";
 

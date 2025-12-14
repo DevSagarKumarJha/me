@@ -1,7 +1,7 @@
 import { FaDiscord, FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import { SiPeerlist } from "react-icons/si";
 
-export const Intro = `{
+export const Intro = {
   "name": "Sagar Kumar Jha",
   "location": "Delhi",
   "email": "devsagarkumarjha@gmail.com",
@@ -12,7 +12,7 @@ export const Intro = `{
   "github_username": "devsagarkumarjha",
   "peerlist_username": "sagarkumarjha",
   "leetcode_username": "devsagarkumarjha"
-}`;
+};
 
 export const sociallinks = [
   {

@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import {Roboto, Noto_Sans } from "next/font/google";
 import "./globals.css";
-import ThemeProviderWrapper from "@/components/ThemeProviderWrapper"; // new client wrapper
-import { Navbar } from "@/components/Navbar";
+import ThemeProviderWrapper from "@/components/wrappers/ThemeProviderWrapper"; // new client wrapper
+import { Navbar } from "@/components/ui/Navbar";
 import FooterSection from "@/sections/FooterSection";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const roboto = Roboto({
+  variable: "--font-roboto",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const notoSans = Noto_Sans({
+  variable: "--font-noto-sans",
   subsets: ["latin"],
 });
 
@@ -29,7 +29,7 @@ export default function RootLayout({
     <html lang="en">
       <head></head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-black/80`}
+        className={`${notoSans.variable} ${roboto.variable} antialiased bg-white dark:bg-black/80`}
       >
         <ThemeProviderWrapper>
           <Navbar/>

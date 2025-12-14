@@ -1,6 +1,6 @@
 import React from "react";
 import { IconType } from "react-icons";
-import { AnimatedContactWrapper } from "./ui/AnimatedContactWrapper";
+import { AnimatedContactWrapper } from "../wrappers/AnimatedContactWrapper";
 
 interface LinkItem {
   icon: IconType;
@@ -19,11 +19,8 @@ const ContactComponent: React.FC<LinkProps> = ({ links }) => {
           const Icon = link.icon;
           return (
             <div key={link.url}>
-              <a
-                href={link.url}
-                className={`text-2xl hover:opacity-90`}
-              >
-                <Icon className=""/>
+              <a href={link.url} className={`text-2xl`}>
+                <Icon className="p-1  rounded-md hover:bg-black hover:text-white hover:dark:bg-white hover:dark:text-black text-4xl transition-colors" />
               </a>
             </div>
           );

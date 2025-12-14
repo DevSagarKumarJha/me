@@ -5,15 +5,20 @@ import React from "react";
 
 export const AnimatedContactWrapper = ({
   children,
+  delay = 0,
 }: {
   children: React.ReactNode;
+  delay?:number;
 }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.9, y: 10 }}
-      whileInView={{ opacity: 1, scale: 1, y: 0 }}
-      transition={{ duration: 0.4, ease: "easeOut" }}
-      viewport={{ once: true }}
+      initial={{ opacity: 0, y: 24 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: 0.5,
+        ease: "easeOut",
+        delay,
+      }}
     >
       {children}
     </motion.div>

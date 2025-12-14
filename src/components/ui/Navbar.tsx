@@ -91,11 +91,8 @@ export function Navbar() {
 
 function NavLinks({ onClick }: { onClick?: () => void }) {
   const links = [
-    { href: "#about", label: "About" },
-    { href: "#projects", label: "Projects" },
-    { href: "#experience-education", label: "Experience" },
-    { href: "#skills", label: "Skills" },
-    { href: "#contacts", label: "Contact" },
+    { href: "/about", label: "About" },
+    { href: "/projects", label: "Projects" }
   ];
 
   return (

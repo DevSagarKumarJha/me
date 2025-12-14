@@ -7,7 +7,6 @@ export type LiveStats = {
   mediumCount: number;
   hardCount: number;
   acceptanceRate: string | null;
-  streak: number;
 };
 
 export const leetcodeStats: LiveStats = {
@@ -18,7 +17,6 @@ export const leetcodeStats: LiveStats = {
   mediumCount: 252,
   hardCount: 108,
   acceptanceRate: "85.5%",
-  streak: 100,
 };
 
 // Async function to fetch latest stats

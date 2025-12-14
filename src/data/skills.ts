@@ -2,7 +2,7 @@ import { ToolCase } from "lucide-react";
 import { BiLogoJavascript, BiLogoTypescript, BiLogoVisualStudio } from "react-icons/bi";
 import { MdStorage } from "react-icons/md";
 import { RiNextjsFill, RiNodejsFill, RiReactjsFill, RiTailwindCssFill } from "react-icons/ri";
-import { SiAmazonwebservices, SiApachekafka, SiDocker, SiExpress, SiGithubactions, SiInternetcomputer, SiMongodb, SiOpenai, SiPostgresql, SiPostman } from "react-icons/si";
+import { SiAmazonwebservices, SiApachekafka, SiDocker, SiExpress, SiGithubactions, SiMongodb, SiOpenai, SiPostgresql, SiPostman } from "react-icons/si";
 import { TbWorldWww } from "react-icons/tb";
 
 

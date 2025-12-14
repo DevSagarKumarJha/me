@@ -1,7 +1,6 @@
-import { Settings, Settings2Icon, ToolCaseIcon } from "lucide-react";
+import { Settings } from "lucide-react";
 import React from "react";
 import { IconType } from "react-icons";
-import { SiProtools } from "react-icons/si";
 
 interface SkillProps {
   language: string;

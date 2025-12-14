@@ -13,8 +13,6 @@ import { BiBookOpen, BiGitCommit, BiSolidLocationPlus } from "react-icons/bi";
 import LocationTime from "./LocationTime";
 import { FiZap } from "react-icons/fi";
 import LatestCommitActivity from "./LatestCommitActivity";
-import { GrSystem } from "react-icons/gr";
-import { IoEyeSharp } from "react-icons/io5";
 
 const ActivityCard = ({
   className,
@@ -91,38 +89,11 @@ export default function Activities() {
   const [mounted, setMounted] = useState(false);
   const [graphUrl, setGraphUrl] = useState<string>(dark_url);
   const [imageError, setImageError] = useState<boolean>(true);
-  const [onekoEnabled, setOnekoEnabled] = useState(true);
-  const [isDesktop, setIsDesktop] = useState(false);
 
   // Handle mounting to avoid hydration mismatch
   useEffect(() => {
     setMounted(true);
   }, []);
-
-  useEffect(() => {
-    const checkDesktop = () =>
-      setIsDesktop(window.matchMedia("(min-width: 768px)").matches);
-    checkDesktop();
-    window.addEventListener("resize", checkDesktop);
-
-    if (typeof window !== "undefined") {
-      const saved = localStorage.getItem("oneko-enabled");
-      if (saved !== null) setOnekoEnabled(saved === "true");
-    }
-
-    const handleOnekoToggle = (event: CustomEvent) =>
-      setOnekoEnabled(event.detail.enabled);
-    window.addEventListener("oneko-toggle", handleOnekoToggle as EventListener);
-
-    return () => {
-      window.removeEventListener("resize", checkDesktop);
-      window.removeEventListener(
-        "oneko-toggle",
-        handleOnekoToggle as EventListener
-      );
-    };
-  }, []);
-
 
   useEffect(() => {
     if (!mounted) return;
@@ -190,7 +161,7 @@ export default function Activities() {
           className="min-h-[110px]"
         >
           <span className="italic block mt-1 truncate" title="LOTM >.<">
-            "MDN - data attributes"
+            &quot;MDN - data attributes&quot;
           </span>
         </ActivityCard>
 
@@ -204,7 +175,7 @@ export default function Activities() {
             className="italic block mt-1 truncate"
             title="System-design...👁️"
           >
-            "System-design...👁️"
+            &quot;System-design...👁️&quot;
           </span>
         </ActivityCard>
 

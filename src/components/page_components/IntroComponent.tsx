@@ -2,7 +2,7 @@
 import React from "react";
 import { AnimatedTopSection } from "../wrappers/AnimatedTopSection";
 import dynamic from "next/dynamic";
-import { Terminal, TerminalSquare } from "lucide-react";
+import { Terminal } from "lucide-react";
 import ContactComponent from "./ContactComponent";
 import { sociallinks } from "@/data/intro";
 

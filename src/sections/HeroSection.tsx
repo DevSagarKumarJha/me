@@ -122,7 +122,7 @@ const HeroSection: FC = () => {
             }}
             className="w-full max-w-md mx-auto"
           >
-            <CodeExample code={Intro} fileName="intro.json" language="json" />
+            <CodeExample code={JSON.stringify(Intro)} fileName="intro.json" language="json" />
           </motion.div>
         </motion.div>
       </div>

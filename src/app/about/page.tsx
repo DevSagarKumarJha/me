@@ -1,4 +1,5 @@
-import AboutComponent from "@/components/AboutComponent";
+
+import AboutComponent from "@/components/page_components/AboutComponent";
 import GithubCalendarComponent from "@/components/page_components/GithubCalendarComponent";
 import LeetCodeStatusComponent from "@/components/page_components/LeetCodeStatusComponent";
 import ToolsAndTechComponent from "@/components/page_components/ToolsAndTechComponent";

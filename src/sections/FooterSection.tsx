@@ -2,12 +2,13 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
+import { RiGithubFill, RiLinkedinFill, RiMailFill } from "react-icons/ri";
 
 const FooterSection = () => {
   return (
     <footer
-      className="w-full border-t border-orange-500/20 dark:border-orange-600/20 mt-16"
+      className="w-full border-t-2 border-orange-500 mt-16"
       data-landmark-index="2"
     >
       <motion.div
@@ -18,9 +19,8 @@ const FooterSection = () => {
         className="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row justify-between items-center gap-6"
       >
         {/* Branding */}
-        <p className="text-zinc-600 dark:text-zinc-400 text-sm">
-          © {new Date().getFullYear()} Sagar Kumar Jha. All rights reserved. |
-          LeetCode Expert
+        <p className="text-orange-500 font-medium dark:text-orange-500 text-sm">
+          © {new Date().getFullYear()} Sagar Kumar Jha. All rights reserved.
         </p>
 
         {/* Social Links */}
@@ -30,27 +30,27 @@ const FooterSection = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="email"
-            className="text-zinc-600 hover:text-orange-600 dark:text-zinc-400 dark:hover:text-orange-400 transition"
+            className="text-orange-500 border-2 hover:text-zinc-700 hover:dark:text-zinc-100 p-1 rounded "
           >
-            <Mail className="w-5 h-5" />
+            <RiMailFill className="size-5" />
           </a>
           <a
             href="https://github.com/DevSagarKumarJha"
             target="_blank"
             aria-label="my_github_profile"
             rel="noopener noreferrer"
-            className="text-zinc-600 hover:text-orange-600 dark:text-zinc-400 dark:hover:text-orange-400 transition"
-            >
-            <Github className="w-5 h-5" />
+            className="text-orange-500 border-2 hover:text-gray-600 hover:dark:text-zinc-200 p-1 rounded "
+          >
+            <RiGithubFill className="size-5" />
           </a>
           <a
             aria-label="my_linkedin_profile"
             href="https://www.linkedin.com/in/devsagarkumarjha"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-zinc-600 hover:text-orange-600 dark:text-zinc-400 dark:hover:text-orange-400 transition"
+            className="text-orange-500 border-2 hover:text-blue-700 p-1 rounded "
           >
-            <Linkedin className="w-5 h-5" />
+            <RiLinkedinFill className="size-5" />
           </a>
         </div>
       </motion.div>

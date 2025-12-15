@@ -2,8 +2,9 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { MenuIcon, XIcon, MoonIcon, SunIcon, LaptopIcon } from "lucide-react";
+import { MenuIcon, XIcon } from "lucide-react";
 import { useTheme } from "next-themes";
+import { RiMoonCloudyFill, RiSunFoggyFill } from "react-icons/ri";
 
 export function Navbar() {
   const [menuOpen, setMenuOpen] = React.useState(false);
@@ -32,10 +33,7 @@ export function Navbar() {
   return (
     <nav
       className={`
-        sticky top-0 z-50 w-full px-4 py-3
-        bg-gray-100/95 dark:bg-gray-950/95 backdrop-blur-lg
-        border-b border-orange-500/30 dark:border-orange-600/30 shadow-lg
-        transition-transform duration-300
+        sticky top-0 z-50 w-full px-4 py-3 transition-all duration-300 bg-background shadow-md border-b-2 border-orange-500
         ${hidden ? "-translate-y-full" : "translate-y-0"}
       `}
     >
@@ -92,7 +90,7 @@ export function Navbar() {
 function NavLinks({ onClick }: { onClick?: () => void }) {
   const links = [
     { href: "/about", label: "About" },
-    { href: "/projects", label: "Projects" }
+    { href: "/projects", label: "Projects" },
   ];
 
   return (
@@ -102,10 +100,7 @@ function NavLinks({ onClick }: { onClick?: () => void }) {
           <Link
             href={link.href}
             className="
-              px-4 py-2 rounded-lg text-gray-800 dark:text-gray-200
-              ease-in-out hover:bg-orange-500/30 transition
-              font-medium text-sm
-            "
+              px-4 py-2 text-gray-800 font-semibold dark:text-gray-200 ease-in-out transition text-sm sm:text-lg hover:text-orange-500 hover:dark:text-orange-500"
             onClick={onClick}
           >
             {link.label}
@@ -126,26 +121,21 @@ export function ThemeToggle() {
   // light → dark → system
   const toggleTheme = () => {
     if (theme === "light") setTheme("dark");
-    else if (theme === "dark") setTheme("system");
     else setTheme("light");
   };
 
   const renderIcon = () => {
     if (theme === "light")
-      return <SunIcon className="size-5 text-yellow-500" />;
-    if (theme === "dark") return <MoonIcon className="size-5 text-blue-300" />;
-    return <LaptopIcon className="size-5 text-purple-400" />;
+      return <RiSunFoggyFill className="size-7 text-yellow-600" />;
+    else 
+      return <RiMoonCloudyFill className="size-7 text-yellow-400" />;
   };
 
   return (
     <button
       aria-label="Toggle theme"
       onClick={toggleTheme}
-      className="
-        p-2 rounded-full bg-white/40 dark:bg-black/40
-        backdrop-blur-md border transition-all cursor-pointer
-        hover:bg-white/60 dark:hover:bg-black/60
-      "
+      className="rounded-full border-2 dark:bg-black/90 border-orange-500 bg-white/90 backdrop-blur-md transition-all cursor-pointer p-1 hover:border-orange-900"
     >
       {renderIcon()}
     </button>

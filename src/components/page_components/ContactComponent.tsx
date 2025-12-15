@@ -15,13 +15,13 @@ interface LinkProps {
 const ContactComponent: React.FC<LinkProps> = ({ links }) => {
   return (
     <AnimatedContactWrapper>
-      <div className="flex gap-3 ">
+      <div className="flex gap-3">
         {links.map((link) => {
           const Icon = link.icon;
           return (
             <div key={link.url}>
               <a href={link.url} target="_blank" aria-label={link.title} className={`text-2xl`}>
-                <Icon className="p-1  rounded-md hover:bg-black hover:text-white hover:dark:bg-white hover:dark:text-black text-4xl transition-colors" />
+                <Icon className="p-1  rounded-md hover:bg-black hover:text-white hover:dark:bg-white hover:dark:text-black text-4xl transition-colors shadow border" />
               </a>
             </div>
           );

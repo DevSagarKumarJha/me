@@ -87,27 +87,13 @@ export default function Activities() {
   const dark_url = "/github-contributions-dark.svg";
 
   const [mounted, setMounted] = useState(false);
-  const [graphUrl, setGraphUrl] = useState<string>(dark_url);
-  const [imageError, setImageError] = useState<boolean>(true);
+  const [imageError, setImageError] = useState<boolean>(false);
 
 
   // Handle mounting to avoid hydration mismatch
   useEffect(() => {
     setMounted(true);
   }, []);
-
-  useEffect(() => {
-    if (!mounted) return;
-
-    setImageError(true);
-    const img = new Image();
-    img.src = resolvedTheme === "dark" ? dark_url : light_url;
-    img.onload = () => {
-      setGraphUrl(img.src);
-      setImageError(false);
-    };
-    img.onerror = () => setImageError(true);
-  }, [resolvedTheme, mounted]);
 
   return (
     <section className="mt-24 space-y-6 px-3 py-2">
@@ -206,19 +192,22 @@ export default function Activities() {
             </div>
 
             <div className="p-2 overflow-hidden">
-              {!mounted ? (
-                <div className="h-fit animate-pulse rounded-lg bg-zinc-200 dark:bg-zinc-800" />
-              ) : !imageError ? (
+              {mounted && resolvedTheme && !imageError ? (
                 <img
-                  src={graphUrl}
-                  className="w-full h-auto rounded-lg opacity-80 group-hover:opacity-100 transition-opacity duration-500 saturate-0 group-hover:saturate-100"
+                  src={resolvedTheme === "dark" ? dark_url : light_url}
                   alt="GitHub Contributions"
+                  width={1200}
+                  height={200}
+                  className="w-full h-auto rounded-lg opacity-80 group-hover:opacity-100 transition-opacity duration-500 saturate-0 group-hover:saturate-100 aspect-[1200/200]"
+                  onError={() => setImageError(true)}
                 />
-              ) : (
+              ) : imageError ? (
                 <div className="h-[120px] flex flex-col items-center justify-center text-center text-muted-foreground space-y-2 bg-muted/5 rounded-lg border border-dashed border-border/30">
                   <SiGithub className="h-6 w-6 opacity-20" />
                   <p className="text-[10px] font-mono">Graph unavailable</p>
                 </div>
+              ) : (
+                <div className="h-[120px] animate-pulse rounded-lg bg-zinc-200 dark:bg-zinc-800" />
               )}
             </div>
           </div>

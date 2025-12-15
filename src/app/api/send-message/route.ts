@@ -1,12 +1,12 @@
-import { NextResponse } from "next/server";
-import { z } from "zod";
+import { NextResponse } from 'next/server';
+import { z } from 'zod';
 
 // Zod 4 schema validation
 const messageSchema = z.object({
   content: z
     .string()
-    .min(1, "Message cannot be empty")
-    .max(2000, "Message too long (max 2000 characters)")
+    .min(1, 'Message cannot be empty')
+    .max(2000, 'Message too long (max 2000 characters)')
     .trim(),
 });
 
@@ -29,23 +29,21 @@ export async function POST(req: Request) {
     const { content } = validation.data;
 
     const res = await fetch(webhookUrl, {
-      method: "POST",
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify({ content }),
     });
 
     if (!res.ok) {
-      throw new Error("Failed to send message to Discord");
+      throw new Error('Failed to send message to Discord');
     }
 
     return NextResponse.json({ success: true });
   } catch (error) {
     return NextResponse.json(
-      {
-        error: error instanceof Error ? error.message : "Internal server error",
-      },
+      { error: error instanceof Error ? error.message : 'Internal server error' },
       { status: 500 }
     );
   }

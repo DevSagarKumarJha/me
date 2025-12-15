@@ -17,12 +17,13 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Download light theme contribution graph
-        run: |
-          curl -L "https://github.com/DevSagarKumarJha/devsagarkumarjha/blob/output/pacman-contribution-graph-dark.svg?raw=true" -o public/github-contributions-light.svg
+        run: | 
+          curl -L "https://github.com/DevSagarKumarJha/devsagarkumarjha/blob/output/pacman-contribution-graph.svg?raw=true" -o public/github-contributions-dark.svg
+          
 
       - name: Download dark theme contribution graph
         run: |
-          curl -L "https://github.com/DevSagarKumarJha/devsagarkumarjha/blob/output/pacman-contribution-graph.svg?raw=true" -o public/github-contributions-dark.svg
+          curl -L "https://github.com/DevSagarKumarJha/devsagarkumarjha/blob/output/pacman-contribution-graph-dark.svg?raw=true" -o public/github-contributions-light.svg
 
       - name: Check for changes
         id: verify-changed-files

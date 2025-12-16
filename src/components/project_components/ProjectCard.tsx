@@ -8,18 +8,19 @@ type ProjectCardProps = {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const { name, description, tech, status, live, link, repo } = project;
-    let color = "text-black dark:text-white";
+    let color;
 
-    if(status === "active") color ="text-green-500";
-    else if (status === "in_progress") color = "text-orange-600"
-    else if (status === "maintained") color = "text-teal-600"
-    else if (status === "archived") color="text-gray-500"
+    if(status === "active") color ="bg-green-700";
+    else if (status === "in_progress") color = "bg-orange-600"
+    else if (status === "maintained") color = "bg-teal-600"
+    else if (status === "archived") color="bg-gray-500"
       return (
         <div className="group relative rounded-2xl p-3 sm:p-4 border transition-all duration-300 overflow-hidden backdrop-blur-sm bg-white border-zinc-200 hover:border-zinc-300 hover:shadow-sm dark:bg-zinc-900/30 dark:border-zinc-800/50 dark:hover:bg-zinc-900/50 dark:hover:border-zinc-700 h-72 flex flex-col justify-around">
           <div className="flex items-center justify-between">
             <h3 className="text-lg font-semibold">{name}</h3>
             <span
-              className={`text-xs uppercase tracking-wider font-semibold ${color}`}
+            title={status.replace("_"," ")}
+              className={`text-xs uppercase tracking-wider px-2 py-1 font-semibold cursor-pointer text-white ${color}`}
             >
               {status.replace("_", " ")}
             </span>

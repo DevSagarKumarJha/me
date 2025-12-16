@@ -2,7 +2,6 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 import { RiGithubFill, RiLinkedinFill, RiMailFill } from "react-icons/ri";
 
 const FooterSection = () => {
